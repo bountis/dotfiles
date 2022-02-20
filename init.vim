@@ -53,14 +53,6 @@ Plug 'rafamadriz/friendly-snippets'
 
 "colorschemes
 Plug 'xero/sourcerer.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'tomasiser/vim-code-dark'
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'frenzyexists/aquarium-vim', { 'branch': 'develop' }
-Plug 'connorholyday/vim-snazzy'
-Plug 'Rigellute/rigel'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-
 Plug 'jiangmiao/auto-pairs'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -70,8 +62,16 @@ call plug#end()
 
 
 "Theme
+let g:nvcode_termcolors=256
+
 set background=dark
-colorscheme apprentice
+colorscheme onedark
+
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
+
 hi Normal guibg=None ctermbg=None
 
 set completeopt=menuone,noselect
