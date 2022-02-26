@@ -36,12 +36,11 @@ Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'vim-airline/vim-airline'
 
 
 "LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 
 
 "Plug 'nvim-lua/completion-nvim'
@@ -53,9 +52,9 @@ Plug 'rafamadriz/friendly-snippets'
 
 "colorschemes
 Plug 'xero/sourcerer.vim'
+Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
@@ -65,7 +64,7 @@ call plug#end()
 let g:nvcode_termcolors=256
 
 set background=dark
-colorscheme onedark
+colorscheme sourcerer
 
 if (has("termguicolors"))
     set termguicolors
@@ -95,7 +94,17 @@ nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap J :m '>+1<CR>gv=gv
 nnoremap K :m '<-2<CR>gv=gv
+nnoremap ; :
 
+"airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"buffer switch maps
+map <leader>bb :buffers<cr>
+nnoremap [b : bp<cr>
+nnoremap ]b : bn<cr>
+"nnoremap <silent><expr><leader>b printf(":\<C-U>%s\n", v:count ? 'buffer' . v:count : 'bnext')
 
 " Snippet maps
 " Expand
