@@ -51,11 +51,9 @@ Plug 'rafamadriz/friendly-snippets'
 
 
 "colorschemes
-<<<<<<< HEAD
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
-=======
->>>>>>> fc93729d7a32a57ed28ca96db320a2d196e3efd0
+
 Plug 'xero/sourcerer.vim'
 Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
@@ -67,18 +65,14 @@ call plug#end()
 
 "Theme
 let g:nvcode_termcolors=256
-<<<<<<< HEAD
 
 set background=dark
 colorscheme sourcerer
 "lua require('colorbuddy').colorscheme('gruvbuddy')
 
-=======
-
 set background=dark
 colorscheme sourcerer
 
->>>>>>> fc93729d7a32a57ed28ca96db320a2d196e3efd0
 if (has("termguicolors"))
     set termguicolors
     hi LineNr ctermbg=NONE guibg=NONE
@@ -108,7 +102,6 @@ nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap J :m '>+1<CR>gv=gv
 nnoremap K :m '<-2<CR>gv=gv
 nnoremap ; :
-<<<<<<< HEAD
 
 
 "airline
@@ -122,8 +115,6 @@ nnoremap [b : bp<cr>
 nnoremap ]b : bn<cr>
 "nnoremap <silent><expr><leader>b printf(":\<C-U>%s\n", v:count ? 'buffer' . v:count : 'bnext')
 
-=======
-
 "airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -133,7 +124,6 @@ map <leader>bb :buffers<cr>
 nnoremap [b : bp<cr>
 nnoremap ]b : bn<cr>
 "nnoremap <silent><expr><leader>b printf(":\<C-U>%s\n", v:count ? 'buffer' . v:count : 'bnext')
->>>>>>> fc93729d7a32a57ed28ca96db320a2d196e3efd0
 
 " Snippet maps
 " Expand
