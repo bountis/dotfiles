@@ -1,7 +1,5 @@
-
 " curl -flo $HOME/.config/nvim/autoload/plug.vim --create-dirs \
 " 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
 
 syntax enable
 set noerrorbells
@@ -19,7 +17,6 @@ set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
-set termguicolors
 set scrolloff=8
 "set colorcolumn=80
 set signcolumn=yes
@@ -28,6 +25,7 @@ set clipboard+=unnamedplus
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set nocompatible
 filetype off
+hi Normal ctermbg=none guibg=none
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -38,10 +36,12 @@ Plug 'mbbill/undotree'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'vim-airline/vim-airline'
 
+Plug 'mfussenegger/nvim-dap'
+
+Plug 'vim-scripts/c.vim'
 
 "LSP
 Plug 'neovim/nvim-lspconfig'
-
 
 "Plug 'nvim-lua/completion-nvim'
 Plug 'hrsh7th/nvim-compe'
@@ -49,40 +49,45 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
 
-
 "colorschemes
 Plug 'tjdevries/colorbuddy.vim'
 Plug 'tjdevries/gruvbuddy.nvim'
-
 Plug 'xero/sourcerer.vim'
-Plug 'romainl/Apprentice'
+
+Plug 'rktjmp/lush.nvim'
+Plug 'adisen99/apprentice.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'romainl/Apprentice'
+Plug 'shaunsingh/nord.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'savq/melange'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/sonokai'
+Plug 'marko-cerovac/material.nvim'
+Plug 'sainnhe/everforest'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
 
-
-"Theme
-let g:nvcode_termcolors=256
-
-set background=dark
-colorscheme sourcerer
-"lua require('colorbuddy').colorscheme('gruvbuddy')
-
-set background=dark
-colorscheme sourcerer
-
-if (has("termguicolors"))
+if has ('termguicolors')
     set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
 endif
-
-hi Normal guibg=None ctermbg=None
+set background=dark
+"let g:material_style = "deep ocean"
+"let g:edge_style = 'neon'
+"let g:edge_better_performance = 1
+"let g:sonokai_style = 'maia'
+"let g:sonokai_better_performance = 1
+"let g:tokyonight_style = "night"
+colorscheme apprentice
+"lua require('colorbuddy').colorscheme('gruvbuddy')
 
 set completeopt=menuone,noselect
 lua require("lsp-config")
 lua require("treesitter")
+lua require("_toggleterm")
 
 
 " Line number
@@ -101,19 +106,7 @@ nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 nnoremap J :m '>+1<CR>gv=gv
 nnoremap K :m '<-2<CR>gv=gv
-nnoremap ; :
 
-
-"airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-
-
-"buffer switch maps
-map <leader>bb :buffers<cr>
-nnoremap [b : bp<cr>
-nnoremap ]b : bn<cr>
-"nnoremap <silent><expr><leader>b printf(":\<C-U>%s\n", v:count ? 'buffer' . v:count : 'bnext')
 
 "airline
 let g:airline#extensions#tabline#enabled = 1

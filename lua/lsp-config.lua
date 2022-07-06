@@ -35,7 +35,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { "pyright", "html", "gopls", "tsserver"}
+local servers = { "pyright", "gopls", "html", "cssls", "tsserver"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach }
 end
@@ -123,36 +123,3 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     'additionalTextEdits',
   }
 }
-
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.rust_analyzer.setup {
-  capabilities = capabilities,
-}
-
-
- -- toggleterm
- require("toggleterm").setup{
-  size = 20,
-  open_mapping = [[<c-\>]],
-  hide_numbers = true,
-  shade_filetypes = {},
-  shade_terminals = true,
-  shading_factor = 2,
-  start_in_insert = true,
-  insert_mappings = true,
-  persist_size = true,
-  direction = "float",
-  close_on_exit = true,
-  shell = vim.o.shell,
-  float_opts = {
-    border = 'curved',
-    winblend = 0,
-    highlights = {
-      border = "Normal",
-      background = "Normal",
-    },
-  },
- }
