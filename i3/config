@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec feh --bg-scale ~/Pictures/wallhaven-39pmld.png
+exec feh --bg-scale ~/Pictures/wallhaven-pkmzk3.png
 exec ~/.screenlayout/layout1.sh
 set $mod Mod4
 

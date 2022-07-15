@@ -1,0 +1,148 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1391,
+       "width": 1259,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Drugelio efektas. Mirror Slave ir BBN apie pirmą bendrą klubo „Elastica“ ir „Orkaitės“ naktį - LRT — Mozilla Firefox",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^firefox$",
+       "instance": "^Navigator$",
+       "title": "^Drugelio\\ efektas\\.\\ Mirror\\ Slave\\ ir\\ BBN\\ apie\\ pirmą\\ bendrą\\ klubo\\ \\„Elastica\\“\\ ir\\ \\„Orkaitės\\“\\ naktį\\ \\-\\ LRT\\ \\—\\ Mozilla\\ Firefox$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1391,
+       "width": 1259,
+       "x": 1287,
+       "y": 14
+    },
+    "marks": [],
+    "name": "Higher-Order Functions :: Eloquent JavaScript — Mozilla Firefox",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^firefox$",
+       "instance": "^Navigator$",
+       "title": "^Higher\\-Order\\ Functions\\ \\:\\:\\ Eloquent\\ JavaScript\\ \\—\\ Mozilla\\ Firefox$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1031,
+       "width": 1892,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "bash",
+    "percent": 0.25,
+    "swallows": [
+       {
+       "class": "^kitty$",
+       "instance": "^kitty$",
+       "title": "^bash$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.25,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1031,
+               "width": 1892,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "bash",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^kitty$",
+               "title": "^bash$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1031,
+               "width": 1892,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "bash",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^kitty$",
+               "title": "^bash$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1031,
+               "width": 1892,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "bash",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "class": "^kitty$",
+               "instance": "^kitty$",
+               "title": "^bash$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
